@@ -4,102 +4,86 @@
     <meta charset="UTF-8">
     <title>Calendar</title>
 
-    <style>
-        body {
-            margin: 0;
-            background: rgb(0,0,0);
-            background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(130,17,17,1) 50%, rgba(252,176,69,1) 100%);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-        .container {
-            display: grid;
-            grid-template-rows: 1fr 5fr;
-            height: 100vh;
-            width: 100vw;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
 
-        .header-wrapper {
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            color: palevioletred;
-        }
+    <link rel="stylesheet" href="styles.css">
 
-        .date-grid-container {
-            display: grid;
-        }
-        
-        .date-grid {
-            display: grid;
-            grid-gap: 5px;
-            grid-template-columns: auto auto auto auto auto auto auto;
-            grid-template-rows: auto auto auto auto auto;
-        }
-        
-        .date-grid div{
-            border: 2px solid yellow;
-            border-radius: 5px;
-            text-align: right;
-            font-size: 1.8em;
-            color: red;
-            padding-right: 15px;
-            padding-top: 15px;
-        }
-
-        .off-date {
-            background-color: rgba(0, 0, 0, 0.5);
-            color: rgba(255, 0, 0, 0.5);
-        }
-
-    </style>
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+    crossorigin="anonymous">
+    
 </head>
 <body>
-    <div class="container">
+
+    <div class="january-container">
         <div class="header-wrapper">
-            <h1>January</h1>
+            <h1><a class="prev" onclick="plusSlides(-1)">&#10094;</a> -------------&#160;&#160;January&#160;&#160;------------- <a class="next" onclick="plusSlides(1)">&#10095;</a></h1>
+            
+            <div class="days-row">
+                <div class="weekday">Sunday</div>
+                <div class="weekday">Monday</div>
+                <div class="weekday">Tuesday</div>
+                <div class="weekday">Wednesday</div>
+                <div class="weekday">Thursday</div>
+                <div class="weekday">Friday</div>
+                <div class="weekday">Saturday</div>
+            </div>
         </div>
+
+
 
         <div class="date-grid-container">
             <div class="date-grid">
-                <div class="box off-date">29</div>
+                <div class="box off-date">29                </div>
                 <div class="box off-date">30</div>
                 <div class="box off-date">31</div>
-                <div class="box">1</div>
-                <div class="box">2</div>
-                <div class="box">3</div>
-                <div class="box">4</div>
-                <div class="box">5</div>
-                <div class="box">6</div>
-                <div class="box">7</div>
-                <div class="box">8</div>
-                <div class="box">9</div>
-                <div class="box">10</div>
-                <div class="box">11</div>
-                <div class="box">12</div>
-                <div class="box">13</div>
-                <div class="box">14</div>
-                <div class="box">15</div>
-                <div class="box">16</div>
-                <div class="box">17</div>
-                <div class="box">18</div>
-                <div class="box">19</div>
-                <div class="box">20</div>
-                <div class="box">21</div>
-                <div class="box">22</div>
-                <div class="box">23</div>
-                <div class="box">24</div>
-                <div class="box">25</div>
-                <div class="box">26</div>
-                <div class="box">27</div>
-                <div class="box">28</div>
-                <div class="box">29</div>
-                <div class="box">30</div>
-                <div class="box">31</div>
+                <div class="box on-date">1</div>
+                <div class="box on-date">2</div>
+                <div class="box on-date">3</div>
+                <div class="box on-date">4</div>
+                <div class="box on-date">5</div>
+                <div class="box on-date">6</div>
+                <div class="box on-date">7</div>
+                <div class="box on-date">8</div>
+                <div class="box on-date">9</div>
+                <div class="box on-date">10</div>
+                <div class="box on-date">11</div>
+                <div class="box on-date">12</div>
+                <div class="box on-date">13</div>
+                <div class="box on-date">14</div>
+                <div class="box on-date">15</div>
+                <div class="box on-date">16</div>
+                <div class="box on-date">17</div>
+                <div class="box on-date">18</div>
+                <div class="box on-date">19</div>
+                <div class="box on-date">20</div>
+                <div class="box on-date">21</div>
+                <div class="box on-date">22</div>
+                <div class="box on-date">23</div>
+                <div class="box on-date">
+                    <i class="fas fa-birthday-cake"></i>
+                    24
+                </div>
+                <div class="box on-date">25</div>
+                <div class="box on-date">26</div>
+                <div class="box on-date">27</div>
+                <div class="box on-date">28</div>
+                <div class="box on-date">29</div>
+                <div class="box on-date">30</div>
+                <div class="box on-date">31</div>
                 <div class="box off-date">1</div>
             </div>
         </div>
-    </div>
+    </div> 
+       
 </body>
 </html>
+
+<!-- <script>
+    var el = document.getElementsByClassName('date-grid');
+el.addEventListener('click', function(){
+    document.getElementsByClassName('box').className = 'box:active';
+})
+</script> -->

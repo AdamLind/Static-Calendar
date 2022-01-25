@@ -1,0 +1,188 @@
+html {
+  font-family: "Neonderthaw", cursive;
+}
+
+body {
+  margin: 0;
+  background: black;
+  background: radial-gradient(ellipse at bottom, #10233b 0%, #0f1014 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+
+.january-container {
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header-wrapper {
+  text-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px #D80286, 0 0 82px #D80286, 0 0 92px #D80286, 0 0 102px #D80286, 0 0 151px #D80286;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #D80286;
+  font-size: 1.5em;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.prev,
+.next {
+  text-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px #00e1ff, 0 0 82px #00e1ff, 0 0 92px #00e1ff, 0 0 102px #00e1ff, 0 0 151px #00e1ff;
+  color: #00e1ff;
+}
+
+.days-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  text-decoration: underline;
+  font-family: "Sedgwick Ave", cursive;
+  text-align: center;
+  margin: 20px;
+  margin-top: 35px;
+  margin-bottom: -20px;
+}
+
+.date-grid-container {
+  margin: 20px;
+  display: grid;
+}
+
+.date-grid {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+}
+
+.date-grid div {
+  text-shadow: 0 0 7px white, 0 0 10px white, 0 0 21px white, 0 0 42px #00e1ff, 0 0 82px #00e1ff, 0 0 92px #00e1ff, 0 0 102px #00e1ff, 0 0 151px #00e1ff;
+  font-size: 2em;
+  font-weight: 500;
+  border: 2px solid #00f7ff;
+  border-radius: 4px;
+  text-align: right;
+  color: #00e1ff;
+  padding-right: 15px;
+  padding-top: 0px;
+  box-shadow: inset 0 0 0 0 #D80286;
+  cursor: pointer;
+}
+
+.on-date:hover {
+  transition: ease-out 0.2s;
+  box-shadow: inset 0 100px 0 0 #ff00f2;
+  border: 2px solid fuchsia;
+}
+
+.on-date:active {
+  transition: 0.1s;
+  -webkit-animation: flicker 1s;
+          animation: flicker 1s;
+}
+
+.date-grid > .off-date {
+  box-shadow: inset 0 100px 0 0 #252525;
+  transition: 0.1s;
+}
+
+.date-grid > .off-date:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(255, 0, 0, 0.5);
+  box-shadow: inset 0 100px 0 0 #252525;
+  border: 2px solid red;
+  text-shadow: 0 0 7px black, 0 0 10px black, 0 0 21px black, 0 0 42px red, 0 0 82px red, 0 0 92px red, 0 0 102px red, 0 0 151px red;
+}
+
+.date-grid > .off-date:active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes flicker {
+  0% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  3% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  4% {
+    box-shadow: inset 0 100px 0 0 #D80286;
+  }
+  12% {
+    box-shadow: inset 0 100px 0 0 #D80286;
+  }
+  13% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  40% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  75% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  76% {
+    box-shadow: inset 0 100px 0 0 #770e4f;
+  }
+  90% {
+    box-shadow: inset 0 100px 0 0 #770e4f;
+  }
+  91% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  99% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  100% {
+    box-shadow: inset 0 100px 0 0 #D80286;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  3% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  4% {
+    box-shadow: inset 0 100px 0 0 #D80286;
+  }
+  12% {
+    box-shadow: inset 0 100px 0 0 #D80286;
+  }
+  13% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  40% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  75% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  76% {
+    box-shadow: inset 0 100px 0 0 #770e4f;
+  }
+  90% {
+    box-shadow: inset 0 100px 0 0 #770e4f;
+  }
+  91% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  99% {
+    box-shadow: inset 0 100px 0 0 #58113d;
+  }
+  100% {
+    box-shadow: inset 0 100px 0 0 #D80286;
+  }
+}/*# sourceMappingURL=styles.css.map */
